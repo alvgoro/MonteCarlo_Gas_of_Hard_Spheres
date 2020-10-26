@@ -1,0 +1,6 @@
+reset
+set xrange [0:0.4]
+set key right bottom
+set ylabel "P/(rho*K*T)   [-]" font "Helvetica, 14"
+set xlabel "Frac. volumen   [-]" font "Helvetica, 14" offset 0,0.5
+plot (1+x+x**2-x**3)/(1-x)**3 title "Presión teórica" w l dt "-" lc rgb "red", "presiones.dat" u 1:2 w p pt 7 lc rgb "blue" title "Presiones numéricas"
